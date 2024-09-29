@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(FileProcessor VERSION 0.1 LANGUAGES CXX)
+project(WordStatistics VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -13,16 +13,11 @@ qt_add_executable(appFileProcessor
 )
 
 qt_add_qml_module(appFileProcessor
-    URI FileProcessor
+    URI WordStatistics
     VERSION 1.0
-    QML_FILES Main.qml
-    SOURCES
-    SOURCES CFileController.h CFileController.cpp
-    QML_FILES Histogram.qml
-    SOURCES CHistogramModel.h CHistogramModel.cpp
-    SOURCES
-    SOURCES
-    SOURCES
+    QML_FILES qml/Main.qml qml/Histogram.qml
+    SOURCES src/CFileController.h src/CFileController.cpp
+    SOURCES src/CHistogramModel.h src/CHistogramModel.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

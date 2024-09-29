@@ -4,7 +4,7 @@
 #include <QQmlApplicationEngine>
 
 // Project includes
-#include <CFileController.h>
+#include "src/CFileController.h"
 
 
 int main(int argc, char *argv[])
@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
-    const QUrl url(u"qrc:/FileProcessor/Main.qml"_qs);
+    const QUrl url(u"qrc:/WordStatistics/qml/Main.qml"_qs);
 
     QObject* objectPtr = nullptr;
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated, [&objectPtr](QObject* obj, QUrl Url){

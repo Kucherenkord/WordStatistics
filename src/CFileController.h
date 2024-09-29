@@ -8,7 +8,7 @@
 #include <QFile>
 
 // Project includes
-#include <CHistogramModel.h>
+#include "src/CHistogramModel.h"
 
 
 class CFileController: public QObject
